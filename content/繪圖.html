@@ -147,13 +147,68 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='已知錯誤.html'>Next</a> >> 已知錯誤<br /><h1>簡介</h1>
-<p>本網頁為107學年度第二學期五專部主要開發網頁</p>
-<p>頁面資源介紹、CMSimfly網頁簡介、網際內容管理課程簡介會在分支內介紹</p>
-<p>嵌入小程式(繪圖、亂數產生系統)會在<span style="color: #ff0000;"><a href="/get_page/%E7%A8%8B%E5%BC%8F">程式</a></span>頁面進行介紹</p>
-<p>老師教學內容(w1~w16)會在<span style="color: #ff0000;"><a href="/get_page/%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9" style="color: #ff0000;">網際內容管理課程內容</a></span>分支進行介紹</p>
-<p><span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期中報告</a></span>及<span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期末報告</a></span>則會另外編輯頁面介紹</p>
-<p>範例圖片:<img alt="" height="836" src="./../images/chrome_8WwVwcdH41.png" width="600"/></p><br /> <a href='已知錯誤.html'>Next</a> >> 已知錯誤</div>
+    <div id="tipue_search_content">game-擲骰子 << <a href='game-擲骰子.html'>Previous</a> <a href='ROC flag.html'>Next</a> >> ROC flag<br /><h1>繪圖</h1>
+<p><canvas height="300" id="canvas" width="400"> Your browser doesn't support the HTML5 element canvas. </canvas></p>
+<script>
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext('2d');
+ 
+function draw(){
+ ctx.beginPath();
+ ctx.strokeStyle = "rgb(200,0,0)";
+ ctx.arc(200, 200,50,0,2*Math.PI, false);
+ ctx.closePath();
+ ctx.stroke();
+}
+ 
+function clear_canvas(){
+// Store the current transformation matrix
+// The save() method pushes the current state onto the stack..
+ctx.save();
+ 
+// Use the identity matrix while clearing the canvas
+// the setTransform() method lets you scale, rotate, move, and skew the current context.
+// setTransform(Horizontal scaling, Horizontal skewing,Vertical skewing, Vertical scaling, Horizontal moving, Vertical moving)
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+// Restore the transform
+// The restore() method pops the top state on the stack, restoring the context to that state.
+ctx.restore();
+}
+</script>
+<p><button onclick="draw()">繪圖</button> <button onclick="clear_canvas()">清除</button></p>
+<p>上述以 Html5 Canvas 繪圖的程式碼:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;p&gt;&lt;canvas height="300" id="canvas" width="400"&gt; Your browser doesn't support the HTML5 element canvas. &lt;/canvas&gt;&lt;/p&gt;
+&lt;script&gt;
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext('2d');
+ 
+function draw(){
+ ctx.beginPath();
+ ctx.strokeStyle = "rgb(200,0,0)";
+ ctx.arc(200, 200,50,0,2*Math.PI, false);
+ ctx.closePath();
+ ctx.stroke();
+}
+ 
+function clear_canvas(){
+// Store the current transformation matrix
+// The save() method pushes the current state onto the stack..
+ctx.save();
+ 
+// Use the identity matrix while clearing the canvas
+// the setTransform() method lets you scale, rotate, move, and skew the current context.
+// setTransform(Horizontal scaling, Horizontal skewing,Vertical skewing, Vertical scaling, Horizontal moving, Vertical moving)
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+// Restore the transform
+// The restore() method pops the top state on the stack, restoring the context to that state.
+ctx.restore();
+}
+&lt;/script&gt;
+&lt;p&gt;&lt;button onclick="draw()"&gt;繪圖&lt;/button&gt; &lt;button onclick="clear_canvas()"&gt;清除&lt;/button&gt;&lt;/p&gt;</pre>
+<p></p>
+<br />game-擲骰子 << <a href='game-擲骰子.html'>Previous</a> <a href='ROC flag.html'>Next</a> >> ROC flag</div>
         
     <!-- footer -->
       <div class="container">

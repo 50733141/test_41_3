@@ -147,13 +147,46 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='已知錯誤.html'>Next</a> >> 已知錯誤<br /><h1>簡介</h1>
-<p>本網頁為107學年度第二學期五專部主要開發網頁</p>
-<p>頁面資源介紹、CMSimfly網頁簡介、網際內容管理課程簡介會在分支內介紹</p>
-<p>嵌入小程式(繪圖、亂數產生系統)會在<span style="color: #ff0000;"><a href="/get_page/%E7%A8%8B%E5%BC%8F">程式</a></span>頁面進行介紹</p>
-<p>老師教學內容(w1~w16)會在<span style="color: #ff0000;"><a href="/get_page/%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9" style="color: #ff0000;">網際內容管理課程內容</a></span>分支進行介紹</p>
-<p><span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期中報告</a></span>及<span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期末報告</a></span>則會另外編輯頁面介紹</p>
-<p>範例圖片:<img alt="" height="836" src="./../images/chrome_8WwVwcdH41.png" width="600"/></p><br /> <a href='已知錯誤.html'>Next</a> >> 已知錯誤</div>
+    <div id="tipue_search_content">w1~w9 << <a href='w1~w9.html'>Previous</a> <a href='week_8.html'>Next</a> >> week_8<br /><h1>PUSH及KEY設定</h1>
+<p><strong><span style="color: #ff0000;">關閉操作系統儲存 Github 帳號密碼設定</span></strong><br/><br/><span>目前 KMOL 所使用的 PortableGIT, 內建設定的 credential helper 為 manger, 表示當使用者使用 git push 時內建會跳出讓使用者輸入帳號密碼的對話視窗, 以讓使用者輸入帳號密碼</span><br/><br/><span>我們可使用:</span><span><strong><span style="color: #ff0000;">git config --edit --system</span></strong>指令</span><br/><br/><span>帶出 vi 編輯器, 編輯 git 指令所使用的系統設定, 只要將 credential 項目中的 helper = manager 刪除後儲存, 即可關閉內定將使用者 Github 帳號密碼儲存於操作系統的問題.</span></p>
+<p><span>示範影片如下:</span></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/kW0FOIxfbbI" width="900"></iframe></p>
+<p><span></span></p>
+<p><strong><span style="color: #ff0000;">建立OPENSSH格式的KEY及設定</span></strong></p>
+<p><span>在可攜系統的命令列視窗中, 以 sh 執行 Git 的 shell, 使用<br/><br/><br/><span>ssh-keygen -t rsa -b 4096 -C "This is my key"</span><br/><br/><span>建立位於 y:\home\.ssh\id_rsa 的 Private Key 與位於 y:\home\.ssh\id_rsa.pub 的 Public Key, 並且將 id_rsa.pub 的內容, 轉貼到 Github 帳號 settings 中 SSH and GPG keys 項目內的 SSH Public Key 區.</span></span></p>
+<p>key成功建立以及設定之後，回到自己的github網站並在clone or download裡選擇USE SSH，複製後再可攜式系統裡進行git clone，待畫面顯示done即完成，之後將倉儲資料夾裡.ssh中的config檔案開啟，並將url選項改成ssh，即完成。</p>
+<p><img alt="" height="338" src="./../images/github.com.png" width="600"/></p>
+<p><img alt="" height="301" src="./../images/chrome_SnDiNOCcXF.png" width="500"/></p>
+<p><img alt="" height="313" src="./../images/cmd_MVIAlqZvW8.png" width="600"/></p>
+<p><img alt="" height="218" src="./../images/SciTE_kdp8rX7ZSc.png" width="600"/></p>
+<p><span><span>ssh 連線透過 proxy server, 必須設定 y:\home\.ssh\config 如下:</span></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.kmol.info:3128 %h %p
+  
+# for user1
+# url = git@github.com_user1:user1/cmstest.git
+Host github.com_user1
+    User git
+    Port 22
+    Hostname github.com
+  
+    IdentityFile "y:\home\.ssh\id_rsa_user1"
+  
+    TCPKeepAlive yes
+    IdentitiesOnly yes
+      
+# for user2
+# url = git@github.com_user2:user2/user2.com.git
+Host github.com_user2
+    Port 22
+    Hostname github.com
+  
+    IdentityFile "y:\home\.ssh\id_rsa_user2"
+  
+    TCPKeepAlive yes
+    IdentitiesOnly yes</pre>
+<p>示範影片如下:<br/><br/></p>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="506" src="https://www.youtube.com/embed/KHRf3T2gJsM" width="943"></iframe></p>
+<br />w1~w9 << <a href='w1~w9.html'>Previous</a> <a href='week_8.html'>Next</a> >> week_8</div>
         
     <!-- footer -->
       <div class="container">

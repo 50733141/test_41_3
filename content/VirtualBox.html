@@ -147,13 +147,33 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='已知錯誤.html'>Next</a> >> 已知錯誤<br /><h1>簡介</h1>
-<p>本網頁為107學年度第二學期五專部主要開發網頁</p>
-<p>頁面資源介紹、CMSimfly網頁簡介、網際內容管理課程簡介會在分支內介紹</p>
-<p>嵌入小程式(繪圖、亂數產生系統)會在<span style="color: #ff0000;"><a href="/get_page/%E7%A8%8B%E5%BC%8F">程式</a></span>頁面進行介紹</p>
-<p>老師教學內容(w1~w16)會在<span style="color: #ff0000;"><a href="/get_page/%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86%E8%AA%B2%E7%A8%8B%E5%85%A7%E5%AE%B9" style="color: #ff0000;">網際內容管理課程內容</a></span>分支進行介紹</p>
-<p><span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期中報告</a></span>及<span style="color: #ff0000;"><a href="/get_page/%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A" style="color: #ff0000;">期末報告</a></span>則會另外編輯頁面介紹</p>
-<p>範例圖片:<img alt="" height="836" src="./../images/chrome_8WwVwcdH41.png" width="600"/></p><br /> <a href='已知錯誤.html'>Next</a> >> 已知錯誤</div>
+    <div id="tipue_search_content">校園授權軟體 << <a href='校園授權軟體.html'>Previous</a> <a href='TWAREN SSL-VPN連線教學.html'>Next</a> >> TWAREN SSL-VPN連線教學<br /><h1>VirtualBox</h1>
+<p>將virtualbox下載下來後開啟，並提前將ubuntu server下載好</p>
+<p>ubuntu下載網址:<a href="https://www.ubuntu.com/download/server">https://www.ubuntu.com/download/server</a></p>
+<p><img alt="" height="108" src="./../images/virtualbox.png" width="70"/></p>
+<p><strong><span style="color: #ff0000;">虛擬主機系統建立</span></strong></p>
+<p><img alt="" height="375" src="./../images/下載ubuntu.png" width="600"/></p>
+<p>將virtualbox開啟之後先進入設定更改網路連接方式，<span style="color: #ff0000;">以網路卡橋接進行連線</span>(下圖連接網路名稱為學校網路)</p>
+<p><img alt="" height="448" src="./../images/虛擬主機連接方式設定.png" width="600"/></p>
+<p>返回首頁並點選新增按鈕新增虛擬主機系統，類型選擇Linux，版本是Ubuntu。並完成其他設定。</p>
+<p><img caption="false" height="288" src="./../images/VirtualBox01.png" width="500"/></p>
+<p><img alt="" height="303" src="./../images/VirtualBox02.png" width="300"/><img alt="" height="303" src="./../images/VirtualBox03.png" width="300"/><img alt="" height="303" src="./../images/VirtualBox04.png" width="300"/><img alt="" height="311" src="./../images/VirtualBox05.png" width="300"/><img alt="" height="311" src="./../images/VirtualBox06.png" width="300"/><img alt="" height="311" src="./../images/VirtualBox07.png" width="300"/></p>
+<p><strong><span style="color: #ff0000;">開啟虛擬主機完成設定</span></strong></p>
+<p><strong><span style="color: #ff0000;">可利用tab或是方向鍵下來控制項目，enter鍵來決定項目。</span></strong></p>
+<p><span style="color: #000000;"><strong>依照上方指示完成後，只剩下虛擬主機系統內的設定。開啟新建立的系統並進行以下設定。</strong></span></p>
+<p><span style="color: #000000;"><strong><img caption="false" height="419" src="./../images/ubuntu安裝1.png" width="500"/><img alt="" height="417" src="./../images/ubuntu安裝2.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝3.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝4.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>以下輸入的proxy網址為當時在學校內所連到的主機伺服器位址。<img alt="" height="420" src="./../images/ubuntu安裝5.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝6.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7-1.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7-1 (2).png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7-2.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7-3.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7-5.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>這裡輸入的資訊為之後設定完成將虛擬主機開啟後須進行登入的帳號密碼。<img alt="" height="420" src="./../images/ubuntu安裝7-6.png" width="500"/><img alt="" height="420" src="./../images/ubuntu安裝7.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>設定完成後等待安裝成功即完成。<img alt="" height="420" src="./../images/ubuntu安裝last.png" width="500"/></strong></span></p>
+<p><span style="color: #000000;"><strong>啟動虛擬主機並且登入後</strong></span></p>
+<p><span style="color: #000000;"><strong>1.利用指令<span><span style="color: #ff0000;">sudo apt install nginx</span> 安裝 nginx WWW 伺服器</span></strong></span></p>
+<p><span style="color: #000000;"><strong><span><img alt="" height="420" src="./../images/以指令安裝nginx.png" width="500"/></span></strong></span></p>
+<p><strong><span style="color: #000000;">2. 利用<span style="color: #ff0000;">ifconfig</span>指令查詢 Ubuntu 伺服器的 IP,在網頁裡輸入網址，測試 nginx 伺服器是否可以連線</span></strong></p>
+<p><strong><span style="color: #000000;"><img alt="" height="420" src="./../images/ifconfig.png" width="500"/></span></strong></p>
+<p><strong><span style="color: #000000;"><img alt="" height="361" src="./../images/vituralbox開啟網頁.png" width="600"/><br/></span></strong></p>
+<p><strong><span style="color: #000000;">3.<span> 開啟安裝好的filezilla client ，將編輯好的 nginx 設定檔案送到 Ubuntu</span></span></strong></p>
+<p><strong><span style="color: #000000;"><span><img alt="" height="477" src="./../images/傳送三個檔案.png" width="600"/></span></span></strong></p>
+<br />校園授權軟體 << <a href='校園授權軟體.html'>Previous</a> <a href='TWAREN SSL-VPN連線教學.html'>Next</a> >> TWAREN SSL-VPN連線教學</div>
         
     <!-- footer -->
       <div class="container">
